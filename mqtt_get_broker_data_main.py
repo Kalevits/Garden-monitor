@@ -24,7 +24,7 @@ def main():
     broker_address="localhost"
 
     print("creating new instance")
-    client = mqtt.Client("P1") #create new instance
+    client = mqtt.Client() #create new instance
     client.on_message=on_message #attach function to callback
     print("connecting to broker")
     client.connect(broker_address) #connect to broker
