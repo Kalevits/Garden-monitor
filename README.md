@@ -1,3 +1,5 @@
 # Garden-monitor
 
-T‰m‰ j‰rjestelm‰ lukee l‰mpˆtila- ja kosteusarvoja puutarhasta ja tallentaa tiedot tietokantaan sek‰ l‰hett‰‰ tiedot ThingSpeakiin. J‰rjestelm‰ll‰ voi myˆs et‰ohjata puutarhan toimintoja, kuten kastelua.
+T√§m√§ on viel√§ puolivalmis ja lis√§√§ osia lis√§t√§√§n sit√§ mukaa kuin niit√§ saadaan valmiiksi. 
+
+T√§m√§ j√§rjestelm√§ lukee l√§mp√∂tila- ja kosteusarvoja puutarhasta ja tallentaa tiedot tietokantaan sek√§ l√§hett√§√§ tiedot ThingSpeakiin. J√§rjestelm√§ll√§ voi my√∂s et√§ohjata puutarhan toimintoja, kuten kastelua.
