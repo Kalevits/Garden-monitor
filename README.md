@@ -2,7 +2,7 @@
 
 This is still under construction and that's why this is updated all the time.
 
-This system reads garden temperature and moisture contents and saves data to MySQL-database and sends information to ThiongSpeak. This also allows to controll different functions like irrigation.
+This system reads garden temperature and moisture contents and saves data to MySQL-database and sends information to ThingSpeak. This also allows to controll different functions like irrigation.
 
 File explanations:
 - Puutarhan seurantajärjestelmä.pdf: General description
