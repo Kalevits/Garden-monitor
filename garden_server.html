@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+
+    <script src="http://localhost/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="http://localhost/canvasjs.min.js"></script>
+    <script type="text/javascript">
+    window.onload = function() {
+	var dataPoints = [];
+	var address = "http://data.fmi.fi/fmi-apikey/your-fmi-api-key/wfs?request=getFeature&storedquery_id=fmi::forecast::oaas::sealevel::point::timevaluepair&geoid=643492"
+	$.get(address, function(data) {
+		$(data).find("point").each(function () {
+			var $dataPoint = $(this);
+			var x = $dataPoint.find("time").text();
+			var y = $dataPoint.find("value").text();
+			dataPoints.push({x: new Date(x), y: parseFloat(y)});
+			
+		});
+		
+		var chart = new CanvasJS.Chart("chartContainer", {
+			title: {
+			    text: "Sea Level Forecast Using FMI Data (Oulu)",
+			    fontSize: 20,
+			},
+      		axisX: {
+				valueFormatString: "DD.MM. HH:mm",
+				labelFontSize: 12,
+				title: "Date",
+				titleFontSize: 15,
+				titleFontWeight: "bold",
+				gridDashType: "dot",
+				gridThickness: 2
+		        },
+			axisY:{
+				title: "Sea level (cm)",
+				titleFontSize: 15,
+				titleFontWeight: "bold",
+			},
+			data: [{
+			    type: "line",
+			    dataPoints: dataPoints,
+			    showInLegend: true,
+			    name: "Oulu",
+			    xValueFormatString:"DD.MM.YYYY HH:mm"
+			  }]
+		});
+		
+		chart.render();
+	});
+  }
+  </script>
+</head>
+<body>
+	
+<h2>Garden control</h2>
+
+<title>Sea Level Chart</title><br><br>
+
+<div id="chartContainer" style="width:35%; height:400px;"></div><br>
+
+<iframe src="http://xxx.xxx.x.xxx" height="100" width="400" style="border:none"></iframe>
+<br>
+
+<iframe src="http://xxx.xxx.x.xxx" height="600" width="400" style="border:none"></iframe>
+
+
+</body>
+</html>
