@@ -11,3 +11,4 @@ File explanations:
 - mqtt_send_garden_data.py: Python module, which sends values to ThingSpeak. mqtt_get_broker_data_main.py uses this.
 - sketch_may23a_mqtt_deep_sleep_omaserveri.ino: NodeMCU-Arduino -program, which reads data from sensors and sends them to broker.
 - puutarhagraafit.cgi: Python-program, that shows results as CanvasJS-graphs. Timespan of selection can be 1-16 weeks.
+- garden_server.html: Html-page to show controls collection and sea level forecast.
